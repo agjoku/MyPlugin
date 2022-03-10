@@ -1,0 +1,4 @@
+name: Testplugin
+version: '${project.version}'
+main: com.giyhub.agjoku.bukkit.testplugin.Testplugin
+api-version: 1.18

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb8d5cef-c212-42fb-99c3-600350b686af" name="デフォルト変更リスト" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/giyhub/agjoku/bukkit/testplugin/Testplugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giyhub/agjoku/bukkit/testplugin/Testplugin.java" afterDir="false" />
     </list>
@@ -115,5 +116,9 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

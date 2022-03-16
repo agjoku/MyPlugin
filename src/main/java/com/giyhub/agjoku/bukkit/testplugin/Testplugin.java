@@ -1,24 +1,25 @@
 package com.giyhub.agjoku.bukkit.testplugin;
 
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.World;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockCookEvent;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryOpenEvent;
 import org.bukkit.event.player.PlayerFishEvent;
 import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class Testplugin extends JavaPlugin implements Listener {
+import static org.bukkit.Material.IRON_INGOT;
+
+public final class Testplugin<meta> extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onBlockCook(BlockCookEvent e) {
@@ -49,11 +50,22 @@ public final class Testplugin extends JavaPlugin implements Listener {
         if(event.getAction() == Action.RIGHT_CLICK_BLOCK || event.getAction() == Action.RIGHT_CLICK_AIR) {
             if(player.getInventory().getItemInMainHand().getType() == Material.DIAMOND) {
                 player.openInventory(inv);
+                inv.setItem(1,item);
             }
         }
     }
 
-    Inventory inv = Bukkit.createInventory(null, 27, "⊂二二二（  ＾ω＾）二⊃ﾌﾞｰﾝ");
+    @EventHandler
+    public void InventoryClickEvent(InventoryClickEvent event) {
+        Player player = (Player)event.getWhoClicked();
+        if(event.getCurrentItem().getType().equals(IRON_INGOT)){
+            event.getWhoClicked().sendMessage("バーカ");
+        }
+
+    }
+
+    Inventory inv = Bukkit.createInventory(null, 9, "⊂二二二（  ＾ω＾）二⊃ﾌﾞｰﾝ");
+    ItemStack item = new ItemStack(IRON_INGOT);
 
 
     @Override

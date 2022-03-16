@@ -15,10 +15,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-
 import static org.bukkit.Material.*;
 
-public final class Testplugin<meta> extends JavaPlugin implements Listener {
+public final class Testplugin extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onBlockCook(BlockCookEvent e) {
